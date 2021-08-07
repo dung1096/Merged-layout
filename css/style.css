@@ -7,6 +7,25 @@
 
 a {
   text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.title {
+  font-size: 4rem;
+  color: #252525;
+  margin: 0 15%;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem auto;
+}
+
+p {
+  font-size: 1.6rem;
+  color: #353d41;
+  margin: 3rem 15%;
 }
 
 ul {
@@ -15,9 +34,26 @@ ul {
   padding: 0;
 }
 
+.btn-violet {
+  background-color: #8067f8;
+  border: 1px solid #8067f8;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  padding: 7rem 0;
+}
+
 .header {
   background-color: #353d41;
   height: 50px;
+}
+
+.header .container {
+  padding: 0;
 }
 
 .header span,
@@ -44,6 +80,10 @@ ul {
 .nav {
   text-transform: uppercase;
   height: 70px;
+}
+
+.nav .container {
+  padding: 0;
 }
 
 .nav__logo a {
@@ -76,7 +116,6 @@ ul {
   background: url(../img/b1.jpg) 100% 100% no-repeat;
   background-size: cover;
   height: 70rem;
-  color: white;
 }
 
 .carousel h1 {
@@ -84,10 +123,11 @@ ul {
   font-size: 5rem;
   word-spacing: 1rem;
   letter-spacing: 0.5rem;
+  color: white;
 }
 
 .carousel p {
-  font-size: 1.6rem;
+  color: white;
 }
 
 .carousel button {
@@ -101,8 +141,201 @@ ul {
   background: transparent;
 }
 
-.carousel button.read-more {
-  background-color: #8067f8;
-  border: 1px solid #8067f8;
+.about p {
+  margin: 2rem auto;
+}
+
+.about hr {
+  border-bottom: 0.5px solid rgba(156, 157, 158, 0.3);
+  width: 75%;
+  margin: 5rem auto;
+}
+
+.about__content i {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  line-height: 4rem;
+  color: #e87461;
+}
+
+.about__item {
+  padding: 0 2rem;
+}
+
+.about__item:nth-child(2) {
+  border-left: 0.5px solid rgba(156, 157, 158, 0.3);
+  border-right: 0.5px solid rgba(156, 157, 158, 0.3);
+}
+
+.contact {
+  background: url(../img/3.jpg) 100% 100% no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contact h1 {
+  color: white;
+  word-spacing: 0.5rem;
+  word-wrap: break-word;
+}
+
+.stats__item h2 {
+  color: #e87461;
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 3rem 0;
+}
+
+.stats__item h3,
+.stats__item p {
+  margin: 1rem;
+}
+
+.gallery {
+  background: url(../img/3.jpg) 100% 100% no-repeat;
+  background-size: cover;
+}
+
+.gallery h1,
+.gallery p {
+  color: white;
+}
+
+.gallery__content {
+  padding-top: 2rem;
+}
+
+.gallery__item {
+  text-align: center;
+  padding: 4rem;
+  background-color: white;
+}
+
+.gallery__item i {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  line-height: 4rem;
+  color: #e87461;
+}
+
+.gallery__item h2 {
+  font-size: 2.5rem;
+}
+
+.gallery__item p {
+  color: black;
+  margin: 0;
+}
+
+.gallery__item--primary {
+  background-color: #e87461;
+  color: white;
+}
+
+.gallery__item--primary i,
+.gallery__item--primary p {
+  color: white;
+}
+
+.opinion__item img {
+  border: #8067f8 solid 0.5rem;
+  border-radius: 50%;
+  width: 100px;
+  margin: 15px 0;
+}
+
+.opinion__pages a {
+  margin: 0 0.5rem;
+}
+
+.opinion__pages i {
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  color: #e87461;
+  opacity: 0.5;
+}
+
+.opinion__pages .active i {
+  opacity: 1;
+}
+
+.subscribe {
+  background-color: #0b0c11;
+}
+
+.subscribe h2 {
+  font-size: 2.5rem;
+  color: #e87461;
+}
+
+.subscribe__newsletter {
+  text-align: left;
+  padding: 0 1rem;
+  width: 50%;
+}
+
+.subscribe__newsletter p {
+  margin: 2rem 0;
+  color: #9c9d9e;
+}
+
+.subscribe__newsletter input {
+  width: 75%;
+  font-size: 1.6rem;
+}
+
+.subscribe__newsletter button i {
+  font-size: 1.6rem;
+}
+
+.subscribe__links {
+  text-align: left;
+  padding: 0 1rem;
+  width: 25%;
+}
+
+.subscribe__links ul li a {
+  color: white;
+}
+
+.subscribe__contact {
+  text-align: left;
+  padding: 0 1rem;
+  width: 25%;
+}
+
+.subscribe__contact ul li {
+  font-size: 1.6rem;
+  color: #9c9d9e;
+}
+
+.subscribe__contact ul li i {
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin-right: 2rem;
+}
+
+.footer {
+  background-color: #252525;
+  color: white;
+  height: 60px;
+}
+
+.footer .container {
+  padding: 0;
+}
+
+.footer p,
+.footer u {
+  margin: 0;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 60px;
 }
 /*# sourceMappingURL=style.css.map */
