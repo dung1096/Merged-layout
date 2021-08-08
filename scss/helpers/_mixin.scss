@@ -1,0 +1,22 @@
+// font text
+@mixin text($fs, $c, $fw) {
+    font-size  : $fs;
+    color      : $c;
+    font-weight: $fw;
+}
+
+@mixin button($bg, $bd, $fs, $tc) {
+    background-color: $bg;
+    border          : 1px solid $bd;
+    font-size       : $fs;
+    color           : $tc;
+}
+
+@mixin icon($w, $h, $lh, $fs, $tc) {
+    width      : $w;
+    height     : $h;
+    line-height: $lh;
+    font-size  : $fs;
+    color      : $tc;
+    text-align : center;
+}

@@ -13,11 +13,13 @@ a {
 .title {
   font-size: 4rem;
   color: #252525;
+  font-weight: 500;
   margin: 0 15%;
 }
 
 .subtitle {
   font-size: 2rem;
+  color: #000000;
   font-weight: 700;
   margin: 2rem auto;
 }
@@ -25,6 +27,7 @@ a {
 p {
   font-size: 1.6rem;
   color: #353d41;
+  font-weight: 500;
   margin: 3rem 15%;
 }
 
@@ -37,9 +40,9 @@ ul {
 .btn-violet {
   background-color: #8067f8;
   border: 1px solid #8067f8;
-  padding: 1rem 3rem;
   font-size: 1.6rem;
-  color: white;
+  color: #ffffff;
+  padding: 1rem 3rem;
 }
 
 .container {
@@ -56,21 +59,19 @@ ul {
   padding: 0;
 }
 
-.header span,
-.header i {
-  color: white;
+.header span {
+  font-size: 1.8rem;
+  color: #ffffff;
   font-weight: 700;
 }
 
-.header span {
-  font-size: 1.8rem;
-}
-
 .header i {
-  font-size: 1.6rem;
   width: 3rem;
   height: 3rem;
   line-height: 3rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-align: center;
 }
 
 .header__contact i {
@@ -78,6 +79,7 @@ ul {
 }
 
 .nav {
+  background-color: #ffffff;
   text-transform: uppercase;
   height: 70px;
 }
@@ -88,7 +90,8 @@ ul {
 
 .nav__logo a {
   font-size: 3.5rem;
-  color: gray;
+  color: #808080;
+  font-weight: 500;
 }
 
 .nav__logo span {
@@ -104,8 +107,12 @@ ul {
 
 .nav__content ul li a {
   font-size: 1.6rem;
-  color: black;
+  color: #000000;
   font-weight: 700;
+}
+
+.nav__content ul li a:hover {
+  color: #8067f8;
 }
 
 .nav__content .active a {
@@ -119,26 +126,28 @@ ul {
 }
 
 .carousel h1 {
-  text-transform: uppercase;
   font-size: 5rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
   word-spacing: 1rem;
   letter-spacing: 0.5rem;
-  color: white;
 }
 
 .carousel p {
-  color: white;
+  color: #ffffff;
 }
 
-.carousel button {
-  padding: 1rem 3rem;
+.carousel .btn-about-us {
+  background-color: transparent;
+  border: 1px solid #ffffff;
   font-size: 1.6rem;
-  color: white;
+  color: #ffffff;
+  padding: 1rem 3rem;
 }
 
-.carousel button.about-us {
-  border: 1px solid white;
-  background: transparent;
+.about {
+  background-color: #ffffff;
 }
 
 .about p {
@@ -154,9 +163,10 @@ ul {
 .about__content i {
   width: 4rem;
   height: 4rem;
-  font-size: 4rem;
   line-height: 4rem;
+  font-size: 4rem;
   color: #e87461;
+  text-align: center;
 }
 
 .about__item {
@@ -175,15 +185,19 @@ ul {
 }
 
 .contact h1 {
-  color: white;
+  color: #ffffff;
   word-spacing: 0.5rem;
   word-wrap: break-word;
 }
 
+.stats {
+  background-color: #ffffff;
+}
+
 .stats__item h2 {
+  font-size: 4rem;
   color: #e87461;
   font-weight: 700;
-  font-size: 4rem;
   margin: 3rem 0;
 }
 
@@ -199,7 +213,7 @@ ul {
 
 .gallery h1,
 .gallery p {
-  color: white;
+  color: #ffffff;
 }
 
 .gallery__content {
@@ -209,15 +223,16 @@ ul {
 .gallery__item {
   text-align: center;
   padding: 4rem;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .gallery__item i {
   width: 4rem;
   height: 4rem;
-  font-size: 4rem;
   line-height: 4rem;
+  font-size: 4rem;
   color: #e87461;
+  text-align: center;
 }
 
 .gallery__item h2 {
@@ -225,22 +240,26 @@ ul {
 }
 
 .gallery__item p {
-  color: black;
+  color: #000000;
   margin: 0;
 }
 
 .gallery__item--primary {
   background-color: #e87461;
-  color: white;
+  color: #ffffff;
 }
 
 .gallery__item--primary i,
 .gallery__item--primary p {
-  color: white;
+  color: #ffffff;
+}
+
+.opinion {
+  background-color: #ffffff;
 }
 
 .opinion__item img {
-  border: #8067f8 solid 0.5rem;
+  border: 0.5rem solid #8067f8;
   border-radius: 50%;
   width: 100px;
   margin: 15px 0;
@@ -254,8 +273,9 @@ ul {
   width: 1.5rem;
   height: 1.5rem;
   line-height: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #e87461;
+  text-align: center;
   opacity: 0.5;
 }
 
@@ -270,6 +290,7 @@ ul {
 .subscribe h2 {
   font-size: 2.5rem;
   color: #e87461;
+  font-weight: 500;
 }
 
 .subscribe__newsletter {
@@ -299,7 +320,7 @@ ul {
 }
 
 .subscribe__links ul li a {
-  color: white;
+  color: #ffffff;
 }
 
 .subscribe__contact {
@@ -316,14 +337,15 @@ ul {
 .subscribe__contact ul li i {
   width: 1.6rem;
   height: 1.6rem;
-  font-size: 1.6rem;
   line-height: 1.6rem;
+  font-size: 1.6rem;
+  color: #e87461;
+  text-align: center;
   margin-right: 2rem;
 }
 
 .footer {
   background-color: #252525;
-  color: white;
   height: 60px;
 }
 
@@ -333,9 +355,19 @@ ul {
 
 .footer p,
 .footer u {
-  margin: 0;
-  color: white;
   font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0;
   line-height: 60px;
+}
+
+.arrow-up {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  z-index: 10;
+  bottom: 3rem;
+  right: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
