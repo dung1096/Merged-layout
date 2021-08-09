@@ -35,6 +35,11 @@ $fontSize: ("body": 1.6rem,
 // fonts weight
 $fontWeight: ("fwBold": 700,
     "fwRegular": 500,
-    // "fwExtraLight": 400,
-    // "fwLight": 300,
 );
+
+// break point
+$breakPoint:("sm":576px,
+    "md":768px,
+    "lg":992px,
+    "xl":1200px,
+)

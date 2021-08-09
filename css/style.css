@@ -43,11 +43,16 @@ ul {
   font-size: 1.6rem;
   color: #ffffff;
   padding: 1rem 3rem;
+  white-space: nowrap;
 }
 
 .container {
   text-align: center;
   padding: 7rem 0;
+}
+
+.row {
+  margin: 0;
 }
 
 .header {
@@ -86,6 +91,10 @@ ul {
 
 .nav .container {
   padding: 0;
+}
+
+.nav__logo {
+  width: 40%;
 }
 
 .nav__logo a {
@@ -157,7 +166,7 @@ ul {
 .about hr {
   border-bottom: 0.5px solid rgba(156, 157, 158, 0.3);
   width: 75%;
-  margin: 5rem auto;
+  margin: 4rem auto;
 }
 
 .about__content i {
@@ -187,7 +196,7 @@ ul {
 .contact h1 {
   color: #ffffff;
   word-spacing: 0.5rem;
-  word-wrap: break-word;
+  margin: 0;
 }
 
 .stats {
@@ -296,7 +305,6 @@ ul {
 .subscribe__newsletter {
   text-align: left;
   padding: 0 1rem;
-  width: 50%;
 }
 
 .subscribe__newsletter p {
@@ -309,6 +317,10 @@ ul {
   font-size: 1.6rem;
 }
 
+.subscribe__newsletter input:focus {
+  outline: none;
+}
+
 .subscribe__newsletter button i {
   font-size: 1.6rem;
 }
@@ -316,7 +328,6 @@ ul {
 .subscribe__links {
   text-align: left;
   padding: 0 1rem;
-  width: 25%;
 }
 
 .subscribe__links ul li a {
@@ -326,7 +337,6 @@ ul {
 .subscribe__contact {
   text-align: left;
   padding: 0 1rem;
-  width: 25%;
 }
 
 .subscribe__contact ul li {
@@ -369,5 +379,44 @@ ul {
   z-index: 10;
   bottom: 3rem;
   right: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  * {
+    font-size: 9px;
+  }
+  .about__item:nth-child(2) {
+    border-right: none;
+  }
+  .about__item:last-child {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 8px;
+  }
+  .contact button {
+    margin-top: 2rem;
+  }
+  .contact h1 {
+    margin: 0 15%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  * {
+    font-size: 7px;
+  }
+  .about__item:nth-child(2) {
+    border: none;
+  }
+  .gallery .container {
+    padding: 7rem 10%;
+  }
+  .subscribe .container {
+    padding: 7rem 10%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
