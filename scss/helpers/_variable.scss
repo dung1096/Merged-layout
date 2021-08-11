@@ -1,0 +1,40 @@
+// background color
+$bgColor:("primary": #ffffff,
+    "secondary":#e87461,
+    "violet":#8067f8,
+    "gray":#353d41,
+    "dark":#0b0c11,
+    "dark-2":#252525,
+);
+// text color
+$textColor :("textPrimary":#353d41,
+    "textSecondary":#e87461,
+    "textTitle": #252525,
+    "textBlack":#000000,
+    "textWhite":#ffffff,
+    "textGray":#808080,
+    "textViolet":#8067f8,
+    "textLight":#9c9d9e,
+);
+// border color
+$bdColor: ("bdViolet":#8067f8,
+    "bdWhite":#ffffff,
+    "bdGray":rgba(156, 157, 158, 0.3),
+);
+// font size
+$fontSize: ("body": 1.6rem,
+    "subtitle": 2rem,
+    "title":4rem,
+    "h6":1.8rem,
+    "h5":2.5rem,
+    "h4":3rem,
+    "h3":3.5rem,
+    "h2":4.5rem,
+    "h1":5rem);
+
+// fonts weight
+$fontWeight: ("fwBold": 700,
+    "fwRegular": 500,
+    // "fwExtraLight": 400,
+    // "fwLight": 300,
+);

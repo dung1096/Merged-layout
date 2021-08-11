@@ -1,3 +1,7 @@
+@import "./helpers/variable";
+@import "./helpers/function";
+@import "./helpers/mixin";
+
 * {
     font-size: 10px;
     font-family: Arial,
@@ -8,6 +12,22 @@
 
 a {
     text-decoration: none;
+    font-size      : fs("body");
+}
+
+.title {
+    @include text(fs("title"), tc("textTitle"), fw("fwRegular"));
+    margin: 0 15%;
+}
+
+.subtitle {
+    @include text(fs("subtitle"), tc("textBlack"), fw("fwBold"));
+    margin: 2rem auto;
+}
+
+p {
+    @include text(fs("body"), tc("textPrimary"), fw("fwRegular"));
+    margin: 3rem 15%;
 }
 
 ul {
@@ -16,26 +36,31 @@ ul {
     padding        : 0;
 }
 
+.btn-violet {
+    @include button(bg("violet"), bd("bdViolet"), fs("body"), tc("textWhite"));
+    padding: 1rem 3rem;
+}
+
+.container {
+    text-align: center;
+    padding   : 7rem 0;
+}
+
 // HEADER
 .header {
-    background-color: #353d41;
+    background-color: bg("gray");
     height          : 50px;
 
-    span,
-    i {
-        color      : white;
-        font-weight: 700;
+    .container {
+        padding: 0;
     }
 
     span {
-        font-size: 1.8rem;
+        @include text(fs("h6"), tc("textWhite"), fw("fwBold"));
     }
 
     i {
-        font-size  : 1.6rem;
-        width      : 3rem;
-        height     : 3rem;
-        line-height: 3rem;
+        @include icon(3rem, 3rem, 3rem, fs("body"), tc("textWhite"));
     }
 
     &__contact i {
@@ -45,19 +70,21 @@ ul {
 
 // NAVIGATION
 .nav {
-    text-transform: uppercase;
-    height        : 70px;
+    background-color: bg("primary");
+    text-transform  : uppercase;
+    height          : 70px;
+
+    .container {
+        padding: 0;
+    }
 
     &__logo {
         a {
-            font-size: 3.5rem;
-            color    : gray;
+            @include text(fs("h3"), tc("textGray"), fw("fwRegular"));
         }
 
         span {
-            font-size  : 4.5rem;
-            color      : #8067f8;
-            font-weight: 700;
+            @include text(fs("h2"), tc("textViolet"), fw("fwBold"));
         }
     }
 
@@ -66,13 +93,15 @@ ul {
         line-height: 70px;
 
         ul li a {
-            font-size  : 1.6rem;
-            color      : black;
-            font-weight: 700;
+            @include text(fs("body"), tc("textBlack"), fw("fwBold"));
+
+            &:hover {
+                color: tc("textViolet");
+            }
         }
 
         .active a {
-            color: #8067f8;
+            color: tc("textViolet");
         }
     }
 
@@ -84,42 +113,239 @@ ul {
     background     : url(../img/b1.jpg) 100% 100% no-repeat;
     background-size: cover;
     height         : 70rem;
-    color          : white;
 
     h1 {
+        @include text(fs("h1"), tc("textWhite"), fw("fwRegular"));
         text-transform: uppercase;
-        font-size     : 5rem;
         word-spacing  : 1rem;
         letter-spacing: 0.5rem;
     }
 
     p {
-        font-size: 1.6rem;
+        color: tc("textWhite");
     }
 
-    button {
-        padding  : 1rem 3rem;
-        font-size: 1.6rem;
-        color    : white;
-
-        &.about-us {
-            border    : 1px solid white;
-            background: transparent;
-        }
-
-        &.read-more {
-            background-color: #8067f8;
-            border          : 1px solid #8067f8;
-        }
+    .btn-about-us {
+        @include button(transparent, bd("bdWhite"), fs("body"), tc("textWhite"));
+        padding: 1rem 3rem;
     }
 
 }
 
 // ABOUT
+.about {
+    background-color: bg("primary");
+
+    p {
+        margin: 2rem auto;
+    }
+
+    hr {
+        border-bottom: 0.5px solid bd("bdGray");
+        width        : 75%;
+        margin       : 5rem auto;
+    }
+
+    &__content {
+
+        i {
+            @include icon(4rem, 4rem, 4rem, fs("title"), tc("textSecondary"));
+        }
+
+    }
+
+    &__item {
+        padding: 0 2rem;
+    }
+
+    &__item:nth-child(2) {
+        border-left : 0.5px solid bd("bdGray");
+        border-right: 0.5px solid bd("bdGray");
+    }
+}
+
 // CONTACT US
+.contact {
+    background           : url(../img/3.jpg) 100% 100% no-repeat;
+    background-size      : cover;
+    background-attachment: fixed;
+
+    h1 {
+        color       : tc("textWhite");
+        word-spacing: 0.5rem;
+        word-wrap   : break-word;
+    }
+}
+
 // STATS
+.stats {
+    background-color: bg("primary");
+
+    &__item {
+        h2 {
+            @include text(fs("title"), tc("textSecondary"), fw("fwBold"));
+            margin: 3rem 0;
+        }
+
+        h3,
+        p {
+            margin: 1rem;
+        }
+    }
+
+}
+
 // GALLERY
+.gallery {
+    background     : url(../img/3.jpg) 100% 100% no-repeat;
+    background-size: cover;
+
+    h1,
+    p {
+        color: tc("textWhite");
+    }
+
+    &__content {
+        padding-top: 2rem;
+    }
+
+    &__item {
+        text-align      : center;
+        padding         : 4rem;
+        background-color: bg("primary");
+
+        i {
+            @include icon(4rem, 4rem, 4rem, fs("title"), tc("textSecondary"));
+        }
+
+        h2 {
+            font-size: fs("h5");
+        }
+
+        p {
+            color : tc("textBlack");
+            margin: 0;
+        }
+
+        &--primary {
+            background-color: bg("secondary");
+            color           : tc("textWhite");
+
+            i,
+            p {
+                color: tc("textWhite");
+            }
+        }
+    }
+}
+
 // OPINION
-// CONTACT
+.opinion {
+    background-color: bg("primary");
+
+    &__item {
+        img {
+            border       : 0.5rem solid bd("bdViolet");
+            border-radius: 50%;
+            width        : 100px;
+            margin       : 15px 0;
+        }
+    }
+
+    &__pages {
+        a {
+            margin: 0 0.5rem;
+        }
+
+        i {
+            @include icon(1.5rem, 1.5rem, 1.5rem, fs("body"), tc("textSecondary"));
+            opacity: 0.5;
+        }
+
+        .active i {
+            opacity: 1;
+        }
+    }
+}
+
+// SUBSCRIBE
+.subscribe {
+    background-color: bg("dark");
+
+    h2 {
+        @include text(fs("h5"), tc("textSecondary"), fw("fwRegular"));
+    }
+
+    &__newsletter {
+        text-align: left;
+        padding   : 0 1rem;
+        width     : 50%;
+
+        p {
+            margin: 2rem 0;
+            color : tc("textLight");
+        }
+
+        input {
+            width    : 75%;
+            font-size: fs("body");
+        }
+
+        button i {
+            font-size: fs("body");
+        }
+    }
+
+    &__links {
+        text-align: left;
+        padding   : 0 1rem;
+        width     : 25%;
+
+        ul li a {
+            color: tc("textWhite");
+        }
+    }
+
+    &__contact {
+        text-align: left;
+        padding   : 0 1rem;
+        width     : 25%;
+
+        ul li {
+            font-size: fs("body");
+            color    : tc("textLight");
+
+            i {
+                @include icon(1.6rem, 1.6rem, 1.6rem, fs("body"), tc("textSecondary"));
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
 // FOOTER
+.footer {
+    background-color: bg("dark-2");
+    height          : 60px;
+
+    .container {
+        padding: 0;
+    }
+
+    p,
+    u {
+        @include text(fs("body"), tc("textWhite"), fw("fwRegular"));
+        margin     : 0;
+        line-height: 60px;
+    }
+}
+
 // ARROW UP
+.arrow-up {
+    width   : 3rem;
+    height  : 3rem;
+    position: fixed;
+    z-index : 10;
+    bottom  : 3rem;
+    right   : 1rem;
+}
