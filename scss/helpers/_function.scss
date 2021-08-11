@@ -47,3 +47,12 @@
     @warn ("This font doesn't exist");
     @return "";
 }
+
+@function rp($breakpoint) {
+    @if map-has-key($map: $breakPoint, $key: $breakpoint) {
+        @return map-get($map: $breakPoint, $key: $breakpoint);
+    }
+
+    @warn ("This break point doesn't exist");
+    @return "";
+}
